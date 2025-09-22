@@ -4,8 +4,13 @@
   "description": "Full-stack real-time chat application with offline message support",
   "main": "soinech_chat_backend/index.js",
   "scripts": {
+    "dev": "concurrently \"npm run dev --prefix soinech_chat_backend\" \"npm start --prefix soinech_chat_frontend\"",
     "build": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend && npm run build --prefix soinech_chat_frontend",
-    "start": "npm run start --prefix soinech_chat_backend"
+    "start": "npm run start --prefix soinech_chat_backend",
+    "start:backend": "npm run start --prefix soinech_chat_backend",
+    "start:frontend": "npm start --prefix soinech_chat_frontend",
+    "build:frontend": "npm run build --prefix soinech_chat_frontend",
+    "install:all": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend"
   },
   "keywords": [
     "chat",
@@ -18,5 +23,8 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
 }
