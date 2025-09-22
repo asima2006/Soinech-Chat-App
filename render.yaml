@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: soinech-chat-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node soinech_chat_backend/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

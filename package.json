@@ -4,13 +4,14 @@
   "description": "Full-stack real-time chat application with offline message support",
   "main": "soinech_chat_backend/index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix soinech_chat_backend\" \"npm start --prefix soinech_chat_frontend\"",
     "build": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend && npm run build --prefix soinech_chat_frontend",
-    "start": "npm run start --prefix soinech_chat_backend",
+    "start": "npm install --prefix soinech_chat_backend && npm run start --prefix soinech_chat_backend",
+    "dev": "concurrently \"npm run dev --prefix soinech_chat_backend\" \"npm start --prefix soinech_chat_frontend\"",
     "start:backend": "npm run start --prefix soinech_chat_backend",
     "start:frontend": "npm start --prefix soinech_chat_frontend",
     "build:frontend": "npm run build --prefix soinech_chat_frontend",
-    "install:all": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend"
+    "install:all": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend",
+    "postinstall": "npm install --prefix soinech_chat_backend"
   },
   "keywords": [
     "chat",
@@ -23,8 +24,16 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.11.0",
+    "socket.io": "^4.7.2"
+  },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.1.10"
   }
 }
