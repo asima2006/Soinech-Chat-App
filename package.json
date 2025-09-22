@@ -1,0 +1,37 @@
+{
+  "name": "soinech-chat",
+  "version": "1.0.0",
+  "description": "Full-stack real-time chat application with offline message support",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix soinech_chat_backend && npm install --prefix soinech_chat_frontend && npm run build --prefix soinech_chat_frontend",
+    "start": "npm run start --prefix soinech_chat_backend"
+  },
+  "keywords": [
+    "chat",
+    "real-time",
+    "websocket",
+    "react",
+    "nodejs",
+    "postgresql",
+    "offline-messages"
+  ],
+  "author": "Soinech Chat Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asima2006/soinech-chat.git"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {},
+  "workspaces": [
+    "soinech_chat_backend",
+    "soinech_chat_frontend"
+  ]
+}
