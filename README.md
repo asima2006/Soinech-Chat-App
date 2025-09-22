@@ -36,7 +36,7 @@ A real-time chat application built with React, Node.js, Socket.IO, and PostgreSQ
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/asima2006/Soinech-Chat-App.git
    cd soinech_chat
    ```
 
